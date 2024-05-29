@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="ajax">
+    <h1>Ajax Demo</h1>
+</div>
+<button type="button" onclick="button()">Button</button>
+
+
+<script>
+function button() {
+  let xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+      document.getElementById("ajax").innerHTML = this.responseText;
+  };
+  xhttp.open("GET", "ajax_info.txt", true);
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>
